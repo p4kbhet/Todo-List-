@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("01.jpg");
+        }
+
+        #todo-container {
+            max-width: 95%;
+            margin: 20px auto;
+            background-image: url("0000.jpg");
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+			font-family: "Courier New", monospace;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        #todo-form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        #todo-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+			font-family: "Courier New", monospace;
+            border: 1px solid #a964cd;
+            border-radius: 4px 0 0 4px;
+        }
+
+        #todo-form button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 0 4px 4px 0;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #todo-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #0f3057;
+        }
+
+        .complete-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .edit-btn,
+        .delete-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #todo-form button,
+        .todo-item button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #todo-form button {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        #todo-form button:hover,
+        .todo-item button:hover {
+            background-color: #2980b9;
+        }
+
+        .complete-btn {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        .complete-btn:hover {
+            background-color: #27ae60;
+        }
+
+        .edit-btn,
+        .delete-btn {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .edit-btn:hover,
+        .delete-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        @media (max-width: 600px) {
+            #todo-container {
+                margin: 10px;
+            }
+
+            #todo-form {
+                flex-direction: column;
+            }
+
+            #todo-input {
+                margin-bottom: 10px;
+                border-radius: 4px;
+            }
+
+            #todo-form button {
+                border-radius: 4px;
+            }
+			#date-time {
+            margin-top: 10px;
+            color: #333;
+            font-size: 14px;
+        }
+        }
+    </style>
+</head>
+<body>
+
+<div id="todo-container">
+    <h2>Todo List</h2>
+		<div id="date-time"></div>
+    <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add a new todo" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
+</div>    
+    <script src="jv.js"></script>
+</body>
+</html>
